@@ -6,6 +6,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll globally */
+  width: 100%;
+}
 :root {
   --color-pink: #feecea;
   --color-white: #fff;
@@ -279,6 +284,7 @@ body {
   justify-content: center; /* Tambahkan */
   align-items: center; /* Tambahkan */
   padding-top: 3rem;
+  min-height: calc(100vh - 100px);
 }
 .content .left,
 .content .right {
@@ -294,6 +300,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px; /* Add space between sections */
 }
 .left .btn {
   transform: scale(0);
@@ -639,31 +646,31 @@ body {
   width: 20px;
   height: 20px;
   top: 75px;
-  left: 300px;
+  left: 200px;
 }
 .decorate_star.star2 {
   width: 15px;
   height: 20px;
   top: 35px;
-  right: 360px;
+  right: 160px;
 }
 .decorate_star.star3 {
   width: 14px;
   height: 14px;
   top: 290px;
-  left: 630px;
+  left: 130px;
 }
 .decorate_star.star4 {
   width: 18px;
   height: 18px;
   bottom: 60px;
-  left: 35px;
+  left: -35px;
 }
 .decorate_star.star5 {
   width: 16px;
   height: 18px;
   bottom: 140px;
-  left: 500px;
+  left: 100px;
 }
 @keyframes scaleStar {
   25% {
@@ -677,27 +684,6 @@ body {
   position: absolute;
   right: 0;
   bottom: -10px;
-}
-.decorate_flower--one {
-  position: absolute;
-  top: 250px;
-  left: 50px;
-  transform: scale(0);
-  animation: scaleCricle 3s var(--t) forwards ease-in-out;
-}
-.decorate_flower--two {
-  position: absolute;
-  top: 225px;
-  left: 540px;
-  transform: scale(0);
-  animation: scaleCricle 3s var(--t) forwards ease-in-out;
-}
-.decorate_flower--three {
-  position: absolute;
-  top: 150px;
-  right: 235px;
-  transform: scale(0);
-  animation: scaleCricle 3s var(--t) forwards ease-in-out;
 }
 
 .box__letter {
@@ -1377,33 +1363,38 @@ body {
   overflow: hidden;
 }
 
-/* Base class untuk sparkling star */
+/* Base class untuk sparkling star - Updated */
 .sparkle {
   position: absolute;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 50%;
   opacity: 0;
   animation: sparkleAnimation var(--duration) infinite;
   animation-delay: var(--delay);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
+    0 0 16px rgba(255, 255, 255, 0.6), 0 0 24px rgba(255, 255, 255, 0.4);
 }
 
-/* Variasi ukuran sparkling stars */
+/* Variasi ukuran sparkling stars - Updated */
 .sparkle.small {
-  width: 2px;
-  height: 2px;
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(255, 255, 255, 0.7);
 }
 
 .sparkle.medium {
-  width: 3px;
-  height: 3px;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 .sparkle.large {
-  width: 4px;
-  height: 4px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 1), 0 0 24px rgba(255, 255, 255, 0.8),
+    0 0 36px rgba(255, 255, 255, 0.6);
 }
 
 /* Variasi warna yang lembut */
@@ -1422,52 +1413,61 @@ body {
   box-shadow: 0 0 8px rgba(255, 255, 224, 0.5);
 }
 
-/* Animasi sparkling */
+/* Enhanced sparkling animations */
 @keyframes sparkleAnimation {
   0%,
   100% {
     opacity: 0;
-    transform: scale(0);
+    transform: scale(0) rotate(0deg);
+  }
+  25% {
+    opacity: 0.7;
+    transform: scale(0.8) rotate(90deg);
   }
   50% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.2) rotate(180deg);
+  }
+  75% {
+    opacity: 0.8;
+    transform: scale(1) rotate(270deg);
   }
 }
 
-/* Animasi alternatif untuk beberapa sparkles */
 @keyframes sparkleFloat {
   0%,
   100% {
     opacity: 0;
-    transform: scale(0) translateY(0px);
+    transform: scale(0) translateY(0px) rotate(0deg);
   }
   25% {
-    opacity: 0.7;
-    transform: scale(1) translateY(-10px);
+    opacity: 0.8;
+    transform: scale(1) translateY(-15px) rotate(120deg);
   }
   75% {
-    opacity: 0.7;
-    transform: scale(1) translateY(10px);
+    opacity: 0.8;
+    transform: scale(1) translateY(15px) rotate(240deg);
   }
 }
 
-/* Animasi fade yang lebih lembut */
 @keyframes sparkleFade {
   0%,
   100% {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.3) rotate(0deg);
   }
   50% {
-    opacity: 0.8;
-    transform: scale(1.2);
+    opacity: 1;
+    transform: scale(1.5) rotate(360deg);
   }
 }
 
 /* Responsive untuk mobile */
 
 @media screen and (max-width: 658px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
   .sparkle {
     animation-duration: 4s; /* Lebih lambat di mobile */
   }

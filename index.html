@@ -178,7 +178,7 @@
                 <div class="content-section" id="twenty">
                   <div class="profile-card">
                     <div class="profile-image">
-                      <img src="/images/arasy.jpg" alt="" />
+                      <img src="./images/arasy.jpg" alt="" />
                     </div>
                     <div class="profile-info">
                       <h3>enjoy ur twenties like its never end</h3>
@@ -245,15 +245,6 @@
       <div class="decorate_star star3" style="--t: 15.4s"></div>
       <div class="decorate_star star4" style="--t: 15.6s"></div>
       <div class="decorate_star star5" style="--t: 15.8s"></div>
-      <div class="decorate_flower--one" style="--t: 15s">
-        <img width="20" src="./images/decorate_flower.png" alt="" />
-      </div>
-      <div class="decorate_flower--two" style="--t: 15.3s">
-        <img width="20" src="./images/decorate_flower.png" alt="" />
-      </div>
-      <div class="decorate_flower--three" style="--t: 15.6s">
-        <img width="20" src="./images/decorate_flower.png" alt="" />
-      </div>
 
       <div class="boxMail">
         <i class="fa-solid fa-xmark"></i>
@@ -338,10 +329,10 @@ function createSparklingStars() {
     document.body.appendChild(sparklingContainer);
 
     const isMobile = window.innerWidth < 658;
-    const sparkleCount = isMobile ? 15 : 25;
+    const sparkleCount = isMobile ? 25 : 40; // Increased count
     const config = {
         sizes: ['small', 'medium', 'large'],
-        colors: ['', 'pink', 'blue', 'yellow'],
+        colors: [''], // Only white sparkles for clarity
         animations: ['sparkleAnimation', 'sparkleFloat', 'sparkleFade']
     };
 
@@ -353,31 +344,25 @@ function createSparklingStars() {
         const size = config.sizes[Math.floor(Math.random() * config.sizes.length)];
         sparkle.classList.add(size);
         
-        // 30% chance for colored sparkles
-        if (Math.random() < 0.3) {
-            const color = config.colors[Math.floor(Math.random() * config.colors.length)];
-            if (color) sparkle.classList.add(color);
-        }
-        
         // Positioning and timing
         Object.assign(sparkle.style, {
             left: Math.random() * 100 + '%',
             top: Math.random() * 100 + '%'
         });
         
-        sparkle.style.setProperty('--duration', (Math.random() * 4 + 3) + 's');
-        sparkle.style.setProperty('--delay', Math.random() * 5 + 's');
+        sparkle.style.setProperty('--duration', (Math.random() * 3 + 2) + 's'); // Faster animation
+        sparkle.style.setProperty('--delay', Math.random() * 3 + 's');
         sparkle.style.animationName = config.animations[Math.floor(Math.random() * config.animations.length)];
         
         sparklingContainer.appendChild(sparkle);
         
         // Cleanup for performance
-        setTimeout(() => sparkle.parentNode && sparkle.remove(), 15000);
+        setTimeout(() => sparkle.parentNode && sparkle.remove(), 12000);
     }
 
     // Initial sparkles creation
     for (let i = 0; i < sparkleCount; i++) {
-        setTimeout(() => createSparkle(), Math.random() * 2000);
+        setTimeout(() => createSparkle(), Math.random() * 1000);
     }
 
     // Continuous sparkle generation
@@ -385,7 +370,7 @@ function createSparklingStars() {
         if (sparklingContainer.children.length < sparkleCount) {
             createSparkle();
         }
-    }, 800);
+    }, 500); // More frequent generation
 }
 
 // Main content display with enhanced effects

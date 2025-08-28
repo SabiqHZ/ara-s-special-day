@@ -699,13 +699,6 @@ body {
   transform: scale(0);
   animation: scaleCricle 3s var(--t) forwards ease-in-out;
 }
-.smiley__icon {
-  position: absolute;
-  bottom: 180px;
-  left: 1000px;
-  transform: scale(0);
-  animation: scaleCricle 3s 15s forwards ease-in-out;
-}
 
 .box__letter {
   position: fixed;
@@ -1678,7 +1671,8 @@ body {
   .profile-info h3,
   .profile-info p,
   .hero-text p,
-  .info-value {
+  .info-value,
+  .info-label {
     letter-spacing: -0.4px;
   }
   .profile-card {

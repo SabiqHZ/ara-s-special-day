@@ -43,6 +43,9 @@
           placeholder="Siapa hayo siapaaa"
           autocomplete="off"
         />
+        <button id="loginBtn" class="login-btn">
+  <i class="fas fa-arrow-right"></i> Lanjut
+</button>
         <div id="loginError" class="login-error"></div>
       </div>
     </div>
@@ -100,7 +103,7 @@
 
               <div class="hero-section">
                 <div class="hero-image">
-                  <img src="./images/unnamed.JPG" alt="" />
+                  <img src="./images/unnamed.jpg" alt="" />
                 </div>
                 <div class="hero-text">
                   <h3>hai sayang</h3>
@@ -130,7 +133,7 @@
                     <h3>Profile Information</h3>
                     <div class="info-grid">
                         <div class="profile-expand-image">
-  <img src="./images/ara.JPG" alt="Profile expand" />
+  <img src="./images/ara.jpg" alt="Profile expand" />
 </div>
                       <div class="info-item">
                         <span class="info-label">Nama:</span>
@@ -174,7 +177,7 @@
                 <div class="content-section" id="twenty">
                   <div class="profile-card">
                     <div class="profile-image">
-                      <img src="./images/unnamed.JPG" alt="" />
+                      <img src="./images/unnamed.jpg" alt="" />
                     </div>
                     <div class="profile-info">
                       <h3>enjoy ur twenties like its never end</h3>
@@ -283,7 +286,7 @@
         <div class="boxMail-container">
           <div class="card1">
             <div class="userImg">
-              <img src="images/unnamed.JPG" alt="" />
+              <img src="images/unnamed.jpg" alt="" />
             </div>
             <h4 class="username">
               To: Hafidzah Arasy💖<span class="underline"></span>
@@ -506,9 +509,11 @@ function updateCountdown() {
 // Login system initialization
 function initializeLogin() {
     const nameInput = document.getElementById("nameInput");
-    if (!nameInput) return;
+    const loginBtn = document.getElementById("loginBtn");
+    if (!nameInput || !loginBtn) return;
     
     nameInput.focus();
+    
     nameInput.addEventListener("keypress", function(e) {
         if (e.key === "Enter") {
             const enteredName = nameInput.value.trim().toLowerCase();
@@ -516,7 +521,20 @@ function initializeLogin() {
         }
     });
 }
-
+    function handleLogin() {
+        const enteredName = nameInput.value.trim().toLowerCase();
+        enteredName === "hafidzah arasy" ? showMainContent() : showError();
+    }
+    
+    // Event listener untuk tombol
+    loginBtn.addEventListener("click", handleLogin);
+    
+    // Event listener untuk Enter key (tetap berfungsi)
+    nameInput.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            handleLogin();
+        }
+    });
 // Shake animation injection
 function addShakeAnimation() {
     const style = document.createElement("style");

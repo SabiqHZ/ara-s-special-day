@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Happy Birthday Website 2.0 | Aoudumber Bade" />
+    <meta name="github" content="https://github.com/Aoudumber-Bade" />
+    <title>Hafidzah Arasy's Birthday</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!-- Pemutar Musik -->
+  <audio id="bgm" autoplay loop>
+    <source src="music/love.mp3" type="audio/mp3" />
+    Browser kamu tidak mendukung audio HTML5.
+  </audio>
+
+  <body>
+    <!-- Login Screen -->
+    <div id="loginScreen">
+      <div class="login-container">
+        <h2>Hai, Penasaran isinya apa?</h2>
+        <p class="subtitle">Who is my girlfriend full name?</p>
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Siapa hayo siapaaa"
+          autocomplete="off"
+        />
+        <div id="loginError" class="login-error"></div>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div class="flag__birthday">
+        <img src="./images/1.png" alt="" width="350" class="flag__left" />
+        <img src="./images/1.png" alt="" width="350" class="flag__right" />
+      </div>
+      <div class="content">
+        <div class="left">
+          <div class="title">
+            <h1 class="happy">
+              <span style="--t: 4s">H</span>
+              <span style="--t: 4.2s">a</span>
+              <span style="--t: 4.4s">p</span>
+              <span style="--t: 4.6s">p</span>
+              <span style="--t: 4.8s">y</span>
+            </h1>
+            <h1 class="birthday">
+              <span style="--t: 5s">B</span>
+              <span style="--t: 5.2s">i</span>
+              <span style="--t: 5.4s">r</span>
+              <span style="--t: 5.6s">t</span>
+              <span style="--t: 5.8s">h</span>
+              <span style="--t: 6s">d</span>
+              <span style="--t: 6.2s">a</span>
+              <span style="--t: 6.4s">y</span>
+            </h1>
+            <div>
+                <!-- Tambahkan bintang-bintang baru ini -->
+            <div class="decorate_star star6" style="--t: 16s"></div>
+            <div class="decorate_star star7" style="--t: 16.2s"></div>
+            <div class="decorate_star star8" style="--t: 16.4s"></div>
+            <div class="decorate_star star9" style="--t: 16.6s"></div>
+            <div class="decorate_star star10" style="--t: 16.8s"></div>
+            <div class="decorate_star star11" style="--t: 17s"></div>
+            <div class="decorate_star star12" style="--t: 17.2s"></div>
+        <div class="right">
+          <div class="box__account">
+              <div class="mewmew-decoration">
+                <img src="./images/mewmew.gif" alt="mewmew" /></div>
+            <div class="card-container">
+              <div class="card-header">
+                <h2>happy birthday!</h2>
+                <p>made by ur bf</p>
+                <div class="social-icons">
+                  <a
+                    href="https://drive.google.com/drive/u/2/folders/1snFd95XAvhKSHFwpO4l9l8DqDP_jtkQ9"
+                    target="_blank"
+                  >
+                    <i class="fab fa-google-drive"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="hero-section">
+                <div class="hero-image">
+                  <img src="./images/unnamed.JPG" alt="" />
+                </div>
+                <div class="hero-text">
+                  <h3>hai sayang</h3>
+                  <h4>happy twenty</h4>
+                  <p>
+                    Wishing you endless happiness, success, and love today and
+                    always. So grateful to have you by my side!
+                  </p>
+                </div>
+              </div>
+
+              <div class="button-nav">
+                <button class="nav-btn" data-target="profile">
+                  <i class="fas fa-bars"></i> Profile
+                </button>
+                <button class="nav-btn" data-target="twenty">
+                  <i class="fas fa-gamepad"></i> Twenty
+                </button>
+                <button class="nav-btn" data-target="journey">
+                  <i class="fas fa-folder-open"></i> Journey
+                </button>
+              </div>
+
+              <div class="content-sections">
+                <div class="content-section" id="profile">
+                  <div class="profile-details">
+                    <h3>Profile Information</h3>
+                    <div class="info-grid">
+                        <div class="profile-expand-image">
+  <img src="./images/ara.JPG" alt="Profile expand" />
+</div>
+                      <div class="info-item">
+                        <span class="info-label">Nama:</span>
+                        <span class="info-value">Hafidzah Arasy (bi, sayang)</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Umur:</span>
+                        <span class="info-value"
+                          >20 tahun (yeyy finallyyy)</span
+                        >
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Tanggal Lahir:</span>
+                        <span class="info-value">31 Agustus 2005</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Hobi:</span>
+                        <span class="info-value"
+                          >ngrecokin pacarnya, ngilangin arah, bangun siang</span
+                        >
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Warna Favorit:</span>
+                        <span class="info-value">Maroon</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Makanan Favorit:</span>
+                        <span class="info-value">C</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Speciality:</span>
+                        <span class="info-value"
+                          >She's the most hardworking girl ive seen </span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <p class="made-with"></p>
+                </div>
+
+                <div class="content-section" id="twenty">
+                  <div class="profile-card">
+                    <div class="profile-image">
+                      <img src="./images/unnamed.JPG" alt="" />
+                    </div>
+                    <div class="profile-info">
+                      <h3>enjoy ur twenties like its never end</h3>
+                      <p>
+                        Selamat ulang tahun bi, semoga di umur ke 20 ini semua hal baik selalu mendatangimu,
+                        dan semoga aku bisa terus berada di sampingmu melihat proses dan setiap langkahmu.
+                        walau aku tidak berada di sampingmu, aku bersyukur bisa merayakan hari spesialmu
+                        melalui tulisan singkat ini, semoga segala kemudahan menyertaimu. Masih banyak hal yang
+                        ingin aku lakukan bersamamu. I love you so much bi, always..
+                      </p>
+                      <div class="age-info">
+                        <span class="age-number">20th</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="made-with">P.S im always here</p>
+                </div>
+
+                <div class="content-section" id="journey">
+                  <div class="journey-content">
+                    <h3>Our Journey Together</h3>
+                    <p>Time since we've been together</p>
+                    <div class="countdown-container">
+                      <div class="countdown-item">
+                        <span class="countdown-number" id="days">0</span>
+                        <span class="countdown-label">Days</span>
+                      </div>
+                      <div class="countdown-item">
+                        <span class="countdown-number" id="hours">0</span>
+                        <span class="countdown-label">Hours</span>
+                      </div>
+                      <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">0</span>
+                        <span class="countdown-label">Minutes</span>
+                      </div>
+                      <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">0</span>
+                        <span class="countdown-label">Seconds</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="made-with">And still goes on..</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Balloon tetap sama -->
+            <div class="balloon_one">
+              <img width="100px" src="./images/balloon1.png" alt="" />
+            </div>
+            <div class="balloon_two">
+              <img width="100px" src="./images/balloon2.png" alt="" />
+            </div>
+            <div class="balloon_one">
+              <img width="100px" src="./images/balloon1.png" alt="" />
+            </div>
+            <div class="balloon_two">
+              <img width="100px" src="./images/balloon2.png" alt="" />
+            </div>
+          </div>
+          <div class="cricle">
+            <div class="text__cricle">
+              <span style="--i: 1">L</span>
+              <span style="--i: 2">O</span>
+              <span style="--i: 3">V</span>
+              <span style="--i: 4">E</span>
+              <span style="--i: 5">-</span>
+              <span style="--i: 6">W</span>
+              <span style="--i: 7">A</span>
+              <span style="--i: 8">V</span>
+              <span style="--i: 9">E</span>
+              <span style="--i: 10">-</span>
+              <span style="--i: 11">E</span>
+              <span style="--i: 12">A</span>
+              <span style="--i: 13">R</span>
+              <span style="--i: 14">T</span>
+              <span style="--i: 15">H</span>
+            </div>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+      </div>
+      <div class="decorate_star star1" style="--t: 15s"></div>
+      <div class="decorate_star star2" style="--t: 15.2s"></div>
+      <div class="decorate_star star3" style="--t: 15.4s"></div>
+      <div class="decorate_star star4" style="--t: 15.6s"></div>
+      <div class="decorate_star star5" style="--t: 15.8s"></div>
+      <div class="decorate_flower--one" style="--t: 15s">
+        <img width="20" src="./images/decorate_flower.png" alt="" />
+      </div>
+      <div class="decorate_flower--two" style="--t: 15.3s">
+        <img width="20" src="./images/decorate_flower.png" alt="" />
+      </div>
+      <div class="decorate_flower--three" style="--t: 15.6s">
+        <img width="20" src="./images/decorate_flower.png" alt="" />
+      </div>
+      <div class="decorate_bottom">
+        <img src="./images/decorate.png" alt="" width="100" />
+      </div>
+      <div class="smiley__icon">
+        <img src="./images/smiley_icon.png" alt="" width="100" />
+      </div>
+
+      <div class="boxMail">
+        <i class="fa-solid fa-xmark"></i>
+        <div class="boxMail-container">
+          <div class="card1">
+            <div class="userImg">
+              <img src="images/unnamed.JPG" alt="" />
+            </div>
+            <h4 class="username">
+              To: Hafidzah Arasy💖<span class="underline"></span>
+            </h4>
+
+            <h3>Happy Birthday</h3>
+            <div class="imageCute">
+              <img src="cute1.png" alt="" />
+            </div>
+          </div>
+          <div class="card2">
+            <div class="card2-content">
+              <h3>Hi bii!</h3>
+              <h2>
+                Happy birthday bii🥳🎂🥳 chanda the day you come into my life I
+                was not really much attached to you but day by day you became
+                close to my heart . And now you are truly my younger sister. I
+                wish I could remove some of the pain from your life which you
+                are bearing alone. But you're always welcome 🤗 you can talk
+                anytime you want to talk specially those which you can't say to
+                others. And this year your all dreams come true . I wish that
+                your brother could wish you but if couldn't wish on him behalf I
+                am wishing you happy birthday 🎈🎂🎈 sana . Don't be Sad ok be
+                happy 😌
+              </h2>
+
+              <div class="imageCute2">
+                <img src="cute2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+// Birthday Website JavaScript - Clean & Optimized
+let audio;
+let isAuthenticated = false;
+
+// Audio initialization
+function initializeAudio() {
+    audio = new Audio("music/love.mp3");
+    audio.loop = true;
+    audio.volume = 0.3;
+}
+
+// Confetti animation
+function createConfetti() {
+    const confettiCount = 100;
+    
+    for (let i = 0; i < confettiCount; i++) {
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        
+        // Random positioning and timing
+        Object.assign(confetti.style, {
+            left: Math.random() * 100 + "%",
+            animationDuration: Math.random() * 3 + 2 + "s",
+            animationDelay: Math.random() * 2 + "s",
+            animation: `confetti-fall ${Math.random() * 3 + 2}s linear forwards`
+        });
+        
+        document.body.appendChild(confetti);
+        
+        // Cleanup after animation
+        setTimeout(() => confetti.remove(), 5000);
+    }
+}
+
+// Sparkling stars background effect
+function createSparklingStars() {
+    const sparklingContainer = document.createElement('div');
+    sparklingContainer.className = 'sparkling-stars';
+    document.body.appendChild(sparklingContainer);
+
+    const isMobile = window.innerWidth < 658;
+    const sparkleCount = isMobile ? 15 : 25;
+    const config = {
+        sizes: ['small', 'medium', 'large'],
+        colors: ['', 'pink', 'blue', 'yellow'],
+        animations: ['sparkleAnimation', 'sparkleFloat', 'sparkleFade']
+    };
+
+    function createSparkle() {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        
+        // Random properties
+        const size = config.sizes[Math.floor(Math.random() * config.sizes.length)];
+        sparkle.classList.add(size);
+        
+        // 30% chance for colored sparkles
+        if (Math.random() < 0.3) {
+            const color = config.colors[Math.floor(Math.random() * config.colors.length)];
+            if (color) sparkle.classList.add(color);
+        }
+        
+        // Positioning and timing
+        Object.assign(sparkle.style, {
+            left: Math.random() * 100 + '%',
+            top: Math.random() * 100 + '%'
+        });
+        
+        sparkle.style.setProperty('--duration', (Math.random() * 4 + 3) + 's');
+        sparkle.style.setProperty('--delay', Math.random() * 5 + 's');
+        sparkle.style.animationName = config.animations[Math.floor(Math.random() * config.animations.length)];
+        
+        sparklingContainer.appendChild(sparkle);
+        
+        // Cleanup for performance
+        setTimeout(() => sparkle.parentNode && sparkle.remove(), 15000);
+    }
+
+    // Initial sparkles creation
+    for (let i = 0; i < sparkleCount; i++) {
+        setTimeout(() => createSparkle(), Math.random() * 2000);
+    }
+
+    // Continuous sparkle generation
+    setInterval(() => {
+        if (sparklingContainer.children.length < sparkleCount) {
+            createSparkle();
+        }
+    }, 800);
+}
+
+// Main content display with enhanced effects
+function showMainContent() {
+    const loginScreen = document.getElementById("loginScreen");
+    const wrapper = document.getElementById("wrapper");
+    
+    isAuthenticated = true;
+    createConfetti();
+
+    // Smooth login screen transition
+    loginScreen.style.transition = "all 1.5s ease-out";
+    loginScreen.classList.add("hidden");
+
+    // Audio start with error handling
+    setTimeout(() => {
+        audio.play().catch(err => console.log("Audio autoplay blocked:", err));
+    }, 100);
+
+    // Main content reveal
+    setTimeout(() => {
+        wrapper.style.transition = "all 2s ease-in";
+        wrapper.classList.add("show");
+    }, 1500);
+
+    // Complete login screen removal
+    setTimeout(() => {
+        loginScreen.style.display = "none";
+    }, 3000);
+
+    // Start sparkling stars after main animations
+    setTimeout(() => createSparklingStars(), 8000);
+}
+
+// Login error handling
+function showError() {
+    const nameInput = document.getElementById("nameInput");
+    const loginError = document.getElementById("loginError");
+    
+    loginError.textContent = "Bukan ituu!!";
+    nameInput.value = "";
+    nameInput.style.animation = "shake 0.5s";
+    
+    setTimeout(() => nameInput.style.animation = "", 500);
+}
+
+// Navigation system
+function initializeNavigation() {
+    const navButtons = document.querySelectorAll(".nav-btn");
+    const contentSections = document.querySelectorAll(".content-section");
+
+    navButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            if (this.classList.contains('loading')) return;
+            
+            const targetId = this.getAttribute("data-target");
+            this.classList.add('loading');
+            
+            // Hide all sections
+            contentSections.forEach(section => section.classList.remove("active"));
+            navButtons.forEach(btn => btn.classList.remove("active"));
+            
+            // Show target section with delay
+            setTimeout(() => {
+                this.classList.add("active");
+                this.classList.remove('loading');
+                document.getElementById(targetId).classList.add("active");
+            }, 350);
+        });
+    });
+}
+
+// Relationship countdown timer
+function updateCountdown() {
+    const startDate = new Date("2024-10-20T00:00:00");
+    const now = new Date();
+    const diff = now.getTime() - startDate.getTime();
+
+    const timeUnits = {
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((diff % (1000 * 60)) / 1000)
+    };
+
+    // Update DOM elements
+    Object.entries(timeUnits).forEach(([unit, value]) => {
+        const element = document.getElementById(unit);
+        if (element) {
+            element.textContent = unit === 'days' ? value : value.toString().padStart(2, "0");
+        }
+    });
+}
+
+// Login system initialization
+function initializeLogin() {
+    const nameInput = document.getElementById("nameInput");
+    if (!nameInput) return;
+    
+    nameInput.focus();
+    nameInput.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            const enteredName = nameInput.value.trim().toLowerCase();
+            enteredName === "hafidzah arasy" ? showMainContent() : showError();
+        }
+    });
+}
+
+// Shake animation injection
+function addShakeAnimation() {
+    const style = document.createElement("style");
+    style.textContent = `
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Application initialization
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize all components
+    initializeAudio();
+    addShakeAnimation();
+    initializeLogin();
+    initializeNavigation();
+    
+    // Start countdown timer
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+});
+  </script>
+</html>
